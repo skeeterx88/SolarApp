@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: solarapp-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: APP_ENV
+        value: lab
+      - key: DATABASE_URL
+        sync: false
